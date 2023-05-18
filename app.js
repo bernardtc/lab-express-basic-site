@@ -7,15 +7,15 @@ app.use(express.static(__dirname));
 
 
 app.get('/', (request, response) => {
-    response.send('Home Page of my Idol!');
+    response.sendFile(__dirname + '/views/home.html');
   });
 
 app.get('/about', (request, response) => {
-    response.send('About Page of my Idol!');
+    response.sendFile(__dirname + '/views/about.html');
   });
 
 app.get('/works', (request, response) => {
-    response.send('Works Page about my Idol!');
+    response.sendFile(__dirname + '/views/works.html');
   });
 
 // to start my server
